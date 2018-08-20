@@ -5,4 +5,8 @@ Downloads the contents of the novel on the webpage and create a `book.txt` file 
 
 ## TO-DO :
 - Convert the `book.txt` file to a PDF
+- Improve quality of code
+  - Improve error handling
+  - Improve logging
+  - Use some kind of workerpool to control no.of goroutines fired
 - Upload generated book to play books to read on mobile.
