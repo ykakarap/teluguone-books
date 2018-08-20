@@ -1,6 +1,6 @@
 # Telugu books downloader for TeluguOne Grandhalayam
 
-A book downloader from TeluguOne Grandhalayam.
+A book downloader to download books from [TeluguOne Grandhalayam](http://www.teluguone.com/grandalayam/).
 Downloads the contents of the novel on the webpage and create a `book.txt` file out of it.
 
 ## TO-DO :
