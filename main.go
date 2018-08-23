@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"golang.org/x/net/html"
 	"io"
@@ -14,10 +15,15 @@ import (
 
 func main() {
 
-	// URL of any page of a book on http://www.teluguone.com/grandalayam/novels
-	url := "http://www.teluguone.com/grandalayam/novels/%E0%B0%8E%E0%B0%AA%E0%B0%BF%E0%B0%B8%E0%B1%8B%E0%B0%A1%E0%B1%8D--4-1488-47741.html"
+	urlPtr := flag.String("url", "", "url of the novel")
+	flag.Parse()
 
-	downloadBook(url)
+	if *urlPtr == "" {
+		fmt.Printf("Please specify a url of the book to download using the '--url' option")
+		return
+	}
+
+	downloadBook(*urlPtr)
 }
 
 func downloadBook(url string) {
